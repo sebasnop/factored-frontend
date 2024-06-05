@@ -2,7 +2,7 @@ import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
-import { Stack } from '@mui/material';
+import { Box, Stack, Button } from '@mui/material';
 
 function App() {
   return (
@@ -15,9 +15,17 @@ function App() {
         </Toolbar>
       </AppBar>
       <main>
-        <Typography variant="h3" color="initial">
-          Factored AI Employees
-        </Typography>
+        <Container maxWidth={false} component="section"
+          sx={{ py: 8, backgroundColor:"#FEFEFE" }}>
+          <Container maxWidth="lg">
+            <Typography variant="h3" color="initial" gutterBottom>
+              Factored AI Employees
+            </Typography>
+            <Button variant="contained" color="primary">
+              Iniciar sesión
+            </Button>
+          </Container>
+        </Container>
       </main>
     </>
   );
