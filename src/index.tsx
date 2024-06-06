@@ -9,6 +9,8 @@ import { theme } from './themes/theme';
 import { RouterProvider } from "react-router-dom";
 import { router } from './router/router';
 
+import { AppProvider } from './context/AppContext';
+
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -16,10 +18,12 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <RouterProvider router={router}/>
-    </ThemeProvider>
+    <AppProvider>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <RouterProvider router={router}/>
+      </ThemeProvider>
+    </AppProvider>
   </React.StrictMode>
 );
 
