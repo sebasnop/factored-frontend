@@ -21,8 +21,6 @@ function LoginForm() {
     event.preventDefault();
     setIsLoading(true);
 
-    setLoggedIn(true);
-
     const data = new FormData(event.currentTarget);
 
     const email: string = data.get('email')?.toString() || "";
@@ -54,12 +52,6 @@ function LoginForm() {
     } finally {
       setIsLoading(false);
     }
-
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-
   };
 
   useEffect(() => {

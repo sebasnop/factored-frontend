@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Typography, Container } from "@mui/material";
 import { Header } from "../components/Header";
 
 function StartPage() {
@@ -7,9 +7,11 @@ function StartPage() {
     <>
       <Header />
       <main>
-        <Typography component="h1" variant="h5">
-          Ya iniciaste sesión
-        </Typography>
+        <Container maxWidth="lg" sx={{px:4, py:8}}>
+          <Typography component="h1" variant="h5">
+            Ya iniciaste sesión
+          </Typography>
+        </Container>
       </main>
     </>
   );
