@@ -1,7 +1,10 @@
-import { Avatar, Box, Container, Typography } from "@mui/material";
+import { Avatar, Box, Container, Link, Typography } from "@mui/material";
 import { Header } from "../components/Header";
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { LoginForm } from "../components/LoginForm";
+import {
+  Link as RouterLink,
+} from 'react-router-dom';
 
 function LoginPage() {
   
@@ -28,7 +31,9 @@ function LoginPage() {
               </Typography>
 
               <LoginForm />
-            
+              <Link component={RouterLink} to="/" sx={{mt:3}}>
+                &lt; Back home
+              </Link>
             </Box>
           </Container>
         </Container>

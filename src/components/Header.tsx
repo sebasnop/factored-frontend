@@ -1,16 +1,8 @@
-import { AppBar, Box, Button, Toolbar } from "@mui/material";
+import { AppBar, Box, Toolbar } from "@mui/material";
 import { Link } from 'react-router-dom';
-import LogoutIcon from '@mui/icons-material/Logout';
-import { AppContextInterface, useAppContext } from "../context/AppContext";
 import { LogoutButton } from "./LogoutButton";
 
 function Header() {
-
-  const signOutButtonText: string = "Sign out";  
-
-  const {
-    loggedIn,
-  }: AppContextInterface = useAppContext();
 
   return (
       <AppBar position='static' color="primary" elevation={1}>

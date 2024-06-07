@@ -56,7 +56,7 @@ function LoginForm() {
 
   useEffect(() => {
     if (loggedIn) {
-      navigate('/employees/');
+      navigate('/employees/1');
     }
   }, [loggedIn, navigate]);
 
