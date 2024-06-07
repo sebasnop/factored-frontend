@@ -4,7 +4,8 @@ import { HomePage } from "../pages/HomePage";
 import { ErrorPage } from "../pages/ErrorPage";
 import { LoginPage } from "../pages/LoginPage";
 import { ProtectedRoute } from "./ProtectedRoute";
-import { StartPage } from "../pages/StartPage";
+import { EmployeesPage } from "../pages/EmployeesPage";
+import { ProfilePage } from "../pages/ProfilePage";
 
 const router = createBrowserRouter([
   {
@@ -17,10 +18,18 @@ const router = createBrowserRouter([
     element: <LoginPage />
   },
   {
-    path: "/start",
+    path: "/employees",
     element: (
       <ProtectedRoute>
-        <StartPage />
+        <EmployeesPage />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/employees/:id",
+    element: (
+      <ProtectedRoute>
+        <ProfilePage />
       </ProtectedRoute>
     ),
   },

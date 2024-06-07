@@ -56,7 +56,7 @@ function LoginForm() {
 
   useEffect(() => {
     if (loggedIn) {
-      navigate('/start'); // Navega a /start cuando loggedIn sea true
+      navigate('/employees/');
     }
   }, [loggedIn, navigate]);
 
